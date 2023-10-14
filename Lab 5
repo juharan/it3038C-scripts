@@ -1,1 +1,18 @@
+#Script for Lab 5 Assignment is: Take a word as input and count how many letters, how many vowels and how many consonants
+#python Lab 5
+string1 = input("Please Enter a String of Word : ")
+vowels = 0
+consonants = 0
 
+for i in string1:
+    if(i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u'
+       or i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U'):
+        vowels = vowels + 1
+    else:
+        consonants = consonants + 1
+      
+letters = vowels + consonats
+ 
+print("Total Number of Vowels in the String = ", vowels)
+print("Total Number of Consonants in the String = ", consonants)
+print("Total Number of Letters in the String = ", letters)
