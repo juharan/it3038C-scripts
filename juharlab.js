@@ -12,18 +12,18 @@ http.createServer(function(req, res) {
   } else if (req.url.match("/sysinfo")) {
     // Get the server uptime
     var uptime = os.uptime();
-    var days = Math.floor(uptime / 86400);
-    var hours = Math.floor((uptime % 86400) / 3600);
+    var days = Math.floor(uptime / 90000);
+    var hours = Math.floor((uptime % 90000) / 3600);
     var minutes = Math.floor((uptime % 3600) / 60);
     var seconds = Math.floor(uptime % 60);
 
-    // Get the total memory
+    // Get total memory
     var totalMemory = os.totalmem();
 
-    // Get the free memory
+    // Get free memory
     var freeMemory = os.freemem();
 
-    // Get the number of CPUs
+    // Get number of CPUs
     var numberOfCPUs = os.cpus().length;
 
     // Generate the HTML response
