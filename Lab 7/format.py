@@ -1,4 +1,4 @@
-
+#The following Image class attributes .format, .size, and .mode is helping when dealing with the image properties:
 >>> img.format
 'JPEG'
 
