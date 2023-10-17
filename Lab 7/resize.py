@@ -1,4 +1,4 @@
-
+#Inorder to crop and resize image, perform these operations, .crop() and .resize() as the following:
 >>> cropped_img = img.crop((300, 150, 700, 1000))
 >>> cropped_img.size
 (400, 850)
