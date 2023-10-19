@@ -1,3 +1,3 @@
-1. To explore images with Pillow, start by opening the image that you  downloaded and apply the following:
-2. The following Image class attributes .format, .size, and .mode is helping when dealing with the image properties:
-3. Inorder to crop and resize image, perform these operations, .crop() and .resize() as the following:
+Explore images with Pillow, start by opening the image that you downloaded and apply the code 
+Apply Image class attributes: .format, .size, and .mode which is helping when dealing with the image properties:
+Inorder to crop and resize image, perform these operations, .crop() and .resize().
