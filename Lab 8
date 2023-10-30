@@ -1,0 +1,28 @@
+import requests
+from bs4 import BeautifulSoup
+
+# URL of the FOX19 News website
+req = requests.get("https://www.fox19.com/news/")
+
+# Send an HTTP GET request to the website
+response = requests.get("https://www.fox19.com/news/")
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the HTML content of the page
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    # Find and print the top news headlines and their links
+    headlines = soup.find_all("h3", class_="gs-c-promo-heading__title")
+    for index, headline in enumerate(headlines, start=1):
+        # Extract the text and link from the headline
+        headline_text = headline.text.strip()
+        headline_link = headline.find("a")["href"]
+
+        # Print the headline and link
+        print(f"{index}. {headline_text}")
+        print(f"   Link: {headline_link}")
+        print()
+
+else:
+    print(f"Failed to retrieve the web page. Status code: {response.status_code}")
