@@ -1,0 +1,11 @@
+To do the website scrapping the following is necessary:
+From the terminal install requests and bs4 as:
+PIP install Requests
+PIP install Beautifulsoup
+prepare the website you are scrapping:
+The Url I am woking is: https://www.fox19.com/news
+What are the outcomes you want to analyse and so on:
+here I need the biggest tile of Fox19 news channel and
+the link corresponding to the titles.
+Then from python IDE,
+imprt the above installs to perform the scrap
