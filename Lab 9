@@ -1,0 +1,23 @@
+//api.js is created in java===
+//python
+
+import requests
+import json
+api_request = requests.get("https://github.com/leonardf-git/it3038-2023/blob/main/week%2010/widgets.json")
+api = json.loads(api_request.content)
+name = api[0]['widget1']
+color = api[0]['color']['Blue']
+
+name = api[0]['widget2']
+color = api[0]['color']['Green']
+
+name = api[0]['widget3']
+color = api[0]['color']['Black']
+
+name = api[0]['widgetx']
+color = api[0]['color']['blue']
+print(widget1 "color" , Blue )
+print(widget2 "color" , Green )
+print(widget3 "color" , Black )
+print(widgetx "color" , blue )
+print(done!)
