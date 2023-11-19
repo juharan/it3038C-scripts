@@ -1,0 +1,60 @@
+ entire script
+
+i. web,py
+
+from routes import app 
+ 
+if __name__ == "__main__": 
+     app.run(debug=True, port=5000, host='0.0.0.0')
+
+ii.routes.py
+
+from flask import Flask, render_template, request
+ 
+app = Flask(__name__, template_folder='template') 
+app.config.from_object(__name__) 
+
+@app.route('/') 
+
+def hello(): 
+   name = 'AJ' 
+   return render_template("index.html", value = name)
+ 
+
+@app.route('/welcome', methods=['POST']) 
+
+def welcome(): 
+  return render_template("welcome.html", myName=request.form['myName'])
+
+Template:
+
+i. layout.html
+
+<!DOCTYPE html> 
+  <head> 
+  </head> 
+  <body> 
+      <H1>Flask app!</H1> 
+      <br /> 
+      {% block content %} 
+      {% endblock %} 
+  </body> 
+</html> 
+
+ii. welcome.html
+
+{% extends "layout.html" %} 
+
+{% block content %} 
+<p><em>Hello, {{ myName }}!</em></p> 
+{% endblock %} 
+
+iii. index.html
+
+{% extends "layout.html" %} 
+
+{% block content %} 
+<p><em>What is your name?</em> 
+   <form action="/welcome" method="POST"><input name="myName"><input type="submit" value="Submit"></form> 
+</p> 
+{% endblock %}
