@@ -8,9 +8,7 @@ app.config.from_object(__name__)
 def hello(): 
    name = 'AJ' 
    return render_template("index.html", value=name)
- 
-
-@app.route('/welcome', methods=['POST']) 
+ @app.route('/welcome', methods=['POST']) 
 
 def welcome(): 
   return render_template("welcome.html", myName=request.form['myName'])
