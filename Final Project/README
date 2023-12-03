@@ -1,5 +1,7 @@
 This project is building Simple GUI Calculator using Python.
+This is acontinuation of project 2; it is is also shown in this final project folder as 'project 2'
 What I used is:
+	I installed pycharm to use as python editor
 	Install python using pip install python
 	Import tkinter files
 	call for Global Math
