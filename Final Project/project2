@@ -1,0 +1,20 @@
+// Project 2
+// The project is a simple calculator used to calculate two numbers using the four mathematical opertations +. -, *. and /
+// the inputs are two numbers num1 and num2
+
+print("SIMPLE CALCULATIONS FOR 2 NUMBERS \n")
+num1 = int(input("please enter First number : "))
+num2 = int(input("please enter Second number : "))
+print("+" , "-" , "*" , "/")
+#output = input("sum" , "difference" , "product")
+sum = num1+num2
+difference = num1-num2
+product = num1*num2
+quotient= num1/num2
+select_ope = input("please select the mathematical operation ")
+if select_ope == "+": print("The sum of numbers" , num1 , "and" , num2 , "is number: {""}".format(sum))
+elif select_ope == "-": print("The difference between numbers" , num1 , "and" , num2 , "is number: {""}".format(difference))
+elif select_ope == "*": print("The product of numbers" , num1 , "and" , num2 , "is number: {""}".format(product))
+elif select_ope == "/": print("The quotient of numbers" , num1 , "and" , num2 , "is number: {""}".format(quotient))
+
+print("Thank you!")
