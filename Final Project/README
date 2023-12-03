@@ -1,0 +1,7 @@
+This project is building Simple GUI Calculator using Python.
+What I used is:
+	Install python using pip install python
+	Import tkinter files
+	call for Global Math
+	create the size of each button
+	Create the size of the display
