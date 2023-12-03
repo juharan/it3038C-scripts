@@ -1,9 +1,13 @@
 This project is building Simple GUI Calculator using Python.
-This is acontinuation of project 2; it is is also shown in this final project folder as 'project 2'
-What I used is:
+This is acontinuation of project 2; it is is also shown in this final project folder as 'project2'
+What is needed to run this code:
 	I installed pycharm to use as python editor
 	Install python using pip install python
 	Import tkinter files
 	call for Global Math
 	create the size of each button
 	Create the size of the display
+	Enter first_number
+	Enter Math operator('+' , '-' , '*' , '/')
+	Enter second_number
+	Use Clerar button and Equal button as needed.
