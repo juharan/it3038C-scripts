@@ -5,15 +5,15 @@ root = Tk()
 root.title("SIMPLE CALCULATOR")
 e = Entry(root, width=40, borderwidth=10)
 e.grid(row=0, column=0, columnspan=3, padx=20, pady=10)
-
+# click  the inpus(numbers) 
 def button_click(number):
     current = e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
-
+#clear the input
 def button_clear():
     e.delete(0, END)
-
+#define functions: add, subtract. multiplication. division, equal
 def button_add():
     first_number = e.get()
     global f_num
@@ -22,7 +22,6 @@ def button_add():
     f_num = int(first_number)
     e.delete(0, END)
 
-
 def button_divide():
     first_number = e.get()
     global f_num
@@ -30,7 +29,6 @@ def button_divide():
     math = "division"
     f_num = int(first_number)
     e.delete(0, END)
-
 
 def button_subtract():
     first_number = e.get()
@@ -48,11 +46,10 @@ def button_multiply():
     f_num = int(first_number)
     e.delete(0, END)
 
-
 def button_equal():
     second_number = e.get()
     e.delete(0, END)
-
+#Mathmatical operations
     if math == "addition":
         e.insert(0, f_num + int(second_number))
     if math == "subtraction":
@@ -62,7 +59,7 @@ def button_equal():
     if math == "division":
         e.insert(0, f_num / int(second_number))
 
-
+#Define buttons and size
 button_1 = Button(root, text="1", padx=46, pady=20, command=lambda: button_click(1))
 button_2 = Button(root, text="2", padx=46, pady=20, command=lambda: button_click(2))
 button_3 = Button(root, text="3", padx=46, pady=20, command=lambda: button_click(3))
@@ -79,7 +76,7 @@ button_clear = Button(root, text="Clear", padx=88, pady=20, command=button_clear
 button_subtract = Button(root, text="-", padx=48, pady=20, command=button_subtract)
 button_multiply = Button(root, text="*", padx=46, pady=20, command=button_multiply)
 button_divide = Button(root, text="/", padx=46, pady=20, command=button_divide)
-
+# positioning buttons with corresponding numbers and functions
 button_1.grid(row=1, column=0)
 button_2.grid(row=1, column=1)
 button_3.grid(row=1, column=2)
@@ -101,6 +98,6 @@ button_equal.grid(row=5, column=1, columnspan=2)
 button_subtract.grid(row=6, column=0)
 button_multiply.grid(row=6, column=1)
 button_divide.grid(row=6, column=2)
-
+# to call functions again
 root.mainloop()
 
